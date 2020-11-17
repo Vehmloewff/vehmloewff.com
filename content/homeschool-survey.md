@@ -152,7 +152,7 @@ Alright, Ive left the most mind-blowing discovery for last.  Once I would finish
 
 I didn't mark down how many times each person asked me to repeat the list, but I wish I did, because when I was about a half way through collecting data for the survey, it suddenly hit me: *the more more times I repeated a list to someone, the higher score they would get*.  It was almost certain!  It didn't matter how sure they thought they were that they had the list down after the first time, they were practically guaranteed to get beat by the fellow who asked for the list again.
 
-I don't know about you, but this is such an interesting find to me that I would be willing to do another survey just on that.  Sadly however, I don't have time to do that now.  If any of you readers decide to pull it of, [please let me know](mailto:vehmloewff@gmail.com).
+I don't know about you, but this is such an interesting find to me that I would be willing to do another survey just on that.  Sadly however, I don't have time to do that now.  If any of you readers decide to pull it of, [please let me know](/contact).
 
 ## Conclusion
 
