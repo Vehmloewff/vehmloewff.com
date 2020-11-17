@@ -88,6 +88,7 @@
 		max-width: 700px;
 		margin: auto;
 		padding: 16px;
+		padding-bottom: 200px;
 	}
 
 	.description {
@@ -144,6 +145,11 @@
 		justify-content: center;
 		height: 100%;
 	}
+
+	.post :global(img) {
+		width: 100%;
+		border-radius: 4px;
+	}
 </style>
 
 {#await promise}
@@ -160,5 +166,5 @@
 		{@html html}
 	</div>
 {:catch error}
-	Could not find that blog post.
+	<div class="center-all">Could not find that blog post.</div>
 {/await}

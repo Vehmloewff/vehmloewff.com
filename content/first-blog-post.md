@@ -2,13 +2,21 @@
 date: 11/13/2020
 title: First Blog Post
 description: Why I build a blog, and how I did it.
-public: true
+searchable: true
+topics: computer-programming
 ---
 
-TODO
+Hello there!  It's nice to have a blog, especially one that supports code blocks...
 
-```typescript
-import * as me from 'you'
+```ts
+import { getViewingUser } from 'facebook-and-google'
+
+const user = getViewingUser()
+const channel = user.openSpywareChannel('ensure-user-views-latest-posts')
+
+channel.activateAndSpy()
 ```
 
-[Something](#/home) is at `contentView`.  [`here`](#)
+... because that is very important to me.
+
+You know, it's amazingly nice to have a blog and all, but you know what is even more amazing?  The fact that you are reading it!  Yep!  So I guess I'll just give you another nice, polite, `Hello ${user.name()}!` before you kindly go check out some of my [latest posts](/blog).  See ya!

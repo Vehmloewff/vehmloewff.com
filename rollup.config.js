@@ -42,12 +42,15 @@ function compileMarkdown() {
 			})
 		},
 		writeBundle() {
+			let tagsAndData = []
+
 			fs.readdirSync('content').forEach(file => {
 				const id = file.slice(0, -3)
 				const markdownFile = `content/${file}`
 				const markdown = fs.readFileSync(markdownFile, 'utf-8')
 				const frontMatterData = frontMatter(markdown)
-				const { title, description, date } = frontMatterData.attributes
+				const { title, description, searchable, topics: rawTopics, date } = frontMatterData.attributes
+				const topics = (rawTopics || 'no-topic').split(/\s+/).map(topic => topic.trim())
 				const frontMatterLessMd = frontMatterData.body
 				const html = new MarkdownIt({
 					highlight: function (str, lang) {
@@ -61,8 +64,12 @@ function compileMarkdown() {
 					},
 				}).render(frontMatterLessMd)
 
-				write(`public/_posts/${id}.json`, JSON.stringify({ html, title, description, date }))
+				if (searchable) tagsAndData.push({ title, description, topics, date, id })
+
+				write(`public/_posts/${id}.json`, JSON.stringify({ html, searchable, topics, title, description, date }))
 			})
+
+			write('public/_posts/searchIndex.json', JSON.stringify(tagsAndData))
 		},
 	}
 }
