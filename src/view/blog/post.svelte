@@ -130,29 +130,6 @@
 		background: rgba(255, 255, 255, 0.1);
 	}
 
-	.post :global(code) {
-		background: rgba(255, 255, 255, 0.1);
-		padding: 0 6px;
-		border-radius: 3px;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		font-size: 14px;
-	}
-
-	.post :global(pre) {
-		background: var(--background-harsh);
-		padding: 10px;
-		border-radius: 4px;
-		margin: 0;
-		overflow-x: auto;
-	}
-
-	.post :global(pre code) {
-		background: rgba(0, 0, 0, 0);
-		padding: none;
-		border-radius: 0;
-		border: none;
-	}
-
 	.center-all {
 		display: flex;
 		align-items: center;
