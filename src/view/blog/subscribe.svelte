@@ -38,11 +38,13 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		padding: 0 16px;
 	}
 
 	input {
 		margin-right: 8px;
 		width: calc(100% - 28px);
+		color: inherit;
 	}
 </style>
 
