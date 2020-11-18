@@ -23,6 +23,6 @@
 		<h1>Hello there!</h1>
 		<p>I'm a developer, efficiency enthusiast, and a history nerd.</p>
 		<button style="float: left" on:click={() => go({ name: 'view.blog' })}>Blog</button>
-		<!-- <button on:click={() => go({ name: 'view.blog'})}>Blog</button> -->
+		<button style="float: right" on:click={() => go({ name: 'view.contact' })}>Contact</button>
 	</div>
 </div>
