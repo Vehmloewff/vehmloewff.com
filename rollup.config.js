@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
+import globFiles from 'rollup-plugin-glob-files'
 import sveltePreprocess from 'svelte-preprocess'
 import typescript from '@rollup/plugin-typescript'
 import fs from 'fs'
@@ -83,6 +84,7 @@ export default {
 		file: 'public/build/bundle.js',
 	},
 	plugins: [
+		globFiles({ key: '@routes', importStar: true, include: ['src/view/**/*.svelte'] }),
 		svelte({
 			css: css => css.write('bundle.css'),
 			preprocess: sveltePreprocess(),

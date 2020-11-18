@@ -1,8 +1,12 @@
-import App from './App.svelte'
+import { addStates, start } from './router'
+import { getStates } from './states'
 
-if (location.pathname !== '/') {
-	location.hash = location.pathname
-	location.pathname = '/'
+async function startApp() {
+	addStates(getStates())
+
+	await start('view.home')
+
+	console.log(getStates())
 }
 
-new App({ target: document.body })
+startApp()

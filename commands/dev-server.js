@@ -7,7 +7,8 @@ const options = {
 	index: 'index.html',
 }
 
-app.use('/', express.static('public', options))
+app.use(express.static('public', options))
+
 app.use((req, res) => {
 	res.sendFile(resolve(`public/index.html`))
 })

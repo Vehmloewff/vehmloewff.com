@@ -1,9 +1,23 @@
+<script context="module" lang="ts">
+	import type { StateOptions } from '../../router'
+
+	export const stateOptions: StateOptions = {
+		name: 'view.blog.post',
+		route: 'post/:post',
+		async resolve(_, { post }) {
+			return { post }
+		},
+	}
+</script>
+
 <script lang="ts">
-	import Loader from '../components/Loader.svelte'
+	import Loader from '../../components/Loader.svelte'
 
-	export let params: { post: string }
+	export let post: string
 
-	$: promise = fetch(`_posts/${params.post}.json`).then(res => res.json())
+	console.log(post)
+
+	$: promise = fetch(`/_posts/${post}.json`).then(res => res.json())
 </script>
 
 <style>
