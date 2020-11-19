@@ -27,13 +27,13 @@
 		{#if !sending}
 			<h3>Need to get it touch?</h3>
 			<p>
-				No problem. You can hit be up on
+				No problem. You can hit me up on
 				<a href="https://discord.gg/cmJgvAJ2Dr">Discord</a>, or send me an
 				<a href="mailto:vehmloewff@gmail.com" on:click={() => setTimeout(() => (sending = true), 1000)}>email</a>.
 			</p>
 		{:else}
 			<h3>Your email app didn't open?</h3>
-			<p>That's ok. There's nothing wrong with doing it manually.</p>
+			<p>That's ok. We can do it this way.</p>
 			<code style="user-select: all">vehmloewff@gmail.com</code>
 		{/if}
 	</div>
