@@ -15,10 +15,25 @@
 
 	export let post: string
 
-	console.log(post)
-
 	$: promise = fetch(`/_posts/${post}.json`).then(res => res.json())
 </script>
+
+{#await promise}
+	<div class="center-all">
+		<Loader />
+	</div>
+{:then { title, description, html, date }}
+	<div class="post">
+		<h1>{title}</h1>
+		<p class="description">{description}</p>
+		<div class="info">
+			<div class="date">{date}</div>
+		</div>
+		{@html html}
+	</div>
+{:catch error}
+	<div class="center-all">Could not find that blog post.</div>
+{/await}
 
 <style>
 	:global(.hljs) {
@@ -142,20 +157,3 @@
 		border-radius: 4px;
 	}
 </style>
-
-{#await promise}
-	<div class="center-all">
-		<Loader />
-	</div>
-{:then { title, description, html, date }}
-	<div class="post">
-		<h1>{title}</h1>
-		<p class="description">{description}</p>
-		<div class="info">
-			<div class="date">{date}</div>
-		</div>
-		{@html html}
-	</div>
-{:catch error}
-	<div class="center-all">Could not find that blog post.</div>
-{/await}

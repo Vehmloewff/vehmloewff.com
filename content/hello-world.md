@@ -1,7 +1,7 @@
 ---
-date: 11/13/2020
+date: 11/12/2020
 title: Hello world
-description: The first blog post on this site
+description: The first blog post on this site.
 searchable: true
 topics: computer-programming
 ---
