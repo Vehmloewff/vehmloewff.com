@@ -27,6 +27,11 @@
 	</div>
 {:then posts}
 	<div class="posts-wrapper">
+		<div class="header-row">
+			<h3 style="float: left; margin: 16px 0">Blog</h3>
+			<button style="float: right; margin-top: 16px" on:click={() => go({ name: 'view.blog.subscribe' })}>Subscribe</button>
+		</div>
+
 		{#each sortPosts(posts) as { title, description, id }}
 			<div on:click={() => go({ name: 'view.blog.post', parameters: { post: id } })} class="post">
 				<div class="title">{title}</div>
@@ -51,8 +56,16 @@
 	}
 
 	.posts-wrapper {
+		max-width: 816px;
+		margin: auto;
 		padding: 8px;
 	}
+
+	.header-row {
+		margin: 0 24px;
+		overflow: hidden;
+	}
+
 	.post {
 		padding: 16px;
 		margin: 8px;
@@ -65,6 +78,9 @@
 		background: rgba(238, 238, 238, 0.11);
 	}
 
+	.post .title {
+		margin-bottom: 5px;
+	}
 	.post .description {
 		font-size: 14px;
 		opacity: 0.5;

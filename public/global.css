@@ -41,6 +41,12 @@ a:not([data-simple]):hover:before {
 	background: var(--primary);
 }
 
+a.active:before {
+	transition: width 100ms ease-out;
+	width: 100%;
+	background: var(--primary);
+}
+
 button {
 	border: none;
 	background: none;

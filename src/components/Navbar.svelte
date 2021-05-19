@@ -13,6 +13,30 @@
 	]
 </script>
 
+<div class="substance-pad" />
+
+<nav>
+	<div class="navigation">
+		<div class="left">
+			<img src="/favicon.png" alt="Favicon" on:click={() => go({ name: 'view' })} />
+			<div class="title">Vehmloewff.com</div>
+		</div>
+		<div class="right">
+			{#each links as link}
+				<a
+					class="link"
+					href={makePath(link.state)}
+					class:active={$activeState.name.startsWith(link.state.name)}
+					on:click={e => {
+						e.preventDefault()
+						go(link.state)
+					}}>{link.name}</a
+				>
+			{/each}
+		</div>
+	</div>
+</nav>
+
 <style>
 	.substance-pad {
 		height: 68px;
@@ -30,6 +54,8 @@
 	.navigation {
 		height: 66px;
 		overflow: hidden;
+		margin: auto;
+		max-width: 800px;
 	}
 	.left {
 		float: left;
@@ -64,28 +90,3 @@
 		font-size: 18px;
 	}
 </style>
-
-<div class="substance-pad" />
-
-<nav>
-	<div class="navigation">
-		<div class="left">
-			<img src="/favicon.png" alt="Favicon" on:click={() => go({ name: 'view' })} />
-			<div class="title">Vehmloewff.com</div>
-		</div>
-		<div class="right">
-			{#each links as link}
-				<a
-					class="link"
-					href={makePath(link.state)}
-					on:click={e => {
-						e.preventDefault()
-						go(link.state)
-					}}>{link.name}</a>
-			{/each}
-		</div>
-	</div>
-	<!-- {#if $activeStateSegments[1] === 'blog'}
-		<div class="blog-post-header">Hello there</div>
-	{/if} -->
-</nav>

@@ -114,7 +114,7 @@
 	}
 
 	.post {
-		max-width: 700px;
+		max-width: 768px;
 		margin: auto;
 		padding: 16px;
 		padding-bottom: 200px;
