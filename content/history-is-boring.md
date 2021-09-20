@@ -1,7 +1,7 @@
 ---
 date: 9/20/21
 title: History is Boring
-description: When history is a series of meaningless events dictating the outcome of a random universe, history is more than boring.  It is meaningless.  If history had meaning, it wouldn't be boring.
+description: When history is a series of meaningless events dictating the outcome of a random universe, history is more than boring.
 searchable: true
 topics: history God meaningless teacher
 ---
