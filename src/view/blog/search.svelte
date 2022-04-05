@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	import { go, StateOptions } from '../../router'
+	import { go, StateOptions, makePath } from '../../router'
 
 	export const stateOptions: StateOptions = {
 		name: 'view.blog.search',
@@ -33,10 +33,12 @@
 		</div>
 
 		{#each sortPosts(posts) as { title, description, id }}
-			<div on:click={() => go({ name: 'view.blog.post', parameters: { post: id } })} class="post">
-				<div class="title">{title}</div>
-				<div class="description">{description}</div>
-			</div>
+			<a href={makePath({ name: 'view.blog.post', parameters: { post: id }})} class="silent">
+				<div class="post">
+					<div class="title">{title}</div>
+					<div class="description">{description}</div>
+				</div>
+			</a>
 		{/each}
 	</div>
 {:catch}

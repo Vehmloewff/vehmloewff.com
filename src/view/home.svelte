@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-	import { go, StateOptions } from '../router'
+	import { go, StateOptions, makePath } from '../router'
 
 	export const stateOptions: StateOptions = {
 		name: 'view.home',
@@ -56,8 +56,9 @@
 			<h1>Hello there!</h1>
 			<p>I'm a developer, efficiency enthusiast, and a history lover.</p>
 			<p>I'm Vehmloewff.</p>
-			<button style="float: left" on:click={() => go({ name: 'view.blog' })}>Blog</button>
-			<button style="float: right" on:click={() => go({ name: 'view.contact' })}>Contact</button>
+
+			<a class="silent" href={makePath({ name: 'view.blog' })} style="float: left"><button>Blog</button></a>
+			<a class="silent" href={makePath({ name: 'view.contact' })} style="float: right"><button>Contact</button></a>
 		</div>
 	</div>
 </div>
