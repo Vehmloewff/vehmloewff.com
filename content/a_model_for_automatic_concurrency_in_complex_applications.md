@@ -1,5 +1,5 @@
 ---
-date: 5/15/21
+date: 6/14/24
 title: A Model for Automatic Concurrency in Complex Applications
 description: >-
   We can construct a graph, noting which tasks depend on which, where the

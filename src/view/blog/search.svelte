@@ -33,7 +33,7 @@
 		</div>
 
 		{#each sortPosts(posts) as { title, description, id }}
-			<a href={makePath({ name: 'view.blog.post', parameters: { post: id }})} class="silent">
+			<a href={makePath({ name: 'view.blog.post', parameters: { post: id } })} class="silent">
 				<div class="post">
 					<div class="title">{title}</div>
 					<div class="description">{description}</div>
